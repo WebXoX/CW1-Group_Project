@@ -15,7 +15,7 @@
       <div id="image">
         <img id="imgsize" v-bind:src="product.image" />
       </div>
-      <button id="addB" v-on:click="addItem">Add to Cart</button>
+      <button id="addB" @click='addItem' v-bind:disabled="!canAdd">Add</button>
     </div>
     <script src="js/script.js"></script>
   </body>

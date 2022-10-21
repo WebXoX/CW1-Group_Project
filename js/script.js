@@ -15,14 +15,16 @@ let webstore = new Vue({
   methods: {
     addItem() {
       let addB = document.getElementById("taskContainer");
-      if (this.product.space > 0) {
+      if (this.product.space >0) {
         this.product.space -= 1;
         this.cart.push(this.product.id);
       }
-      if (this.product.space == 0) {
-        document.getElementById("addB").style.visibility = "hidden";
-        document.getElementById("app").style.height = "170px";
-      }
     },
   },
-});
+    computed: {
+      canAdd(){
+          return this.product.
+          quantity!=0       
+      }
+    }
+  });
