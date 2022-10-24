@@ -14,7 +14,6 @@ let webstore = new Vue({
   },
   methods: {
     addItem() {
-      let addB = document.getElementById("taskContainer");
       if (this.product.space >0) {
         this.product.space -= 1;
         this.cart.push(this.product.id);
@@ -24,7 +23,7 @@ let webstore = new Vue({
     computed: {
       canAdd(){
           return this.product.
-          quantity!=0       
+          space!=0       
       }
     }
   });
