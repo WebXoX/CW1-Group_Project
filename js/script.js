@@ -1,7 +1,9 @@
-let webstore = new Vue({
-  el: "#app",
+//the root Vue instance
+let modulestore = new Vue({
+  el: "#app", // links to the div
+  // the data option
   data: {
-    sitename: "grpCW",
+    sitename: "grpCW", // defines sitename
     product: {
       id: 1001,
       title: "Biology",
@@ -10,20 +12,22 @@ let webstore = new Vue({
       price: 200,
       image: "images/Biology.png",
     },
-    cart: [],
+    cart: [], //creating cart array
   },
+  // the methods option
   methods: {
+    //method for adding item
     addItem() {
-      if (this.product.space >0) {
+      if (this.product.space > 0) {
         this.product.space -= 1;
         this.cart.push(this.product.id);
       }
     },
   },
-    computed: {
-      canAdd(){
-          return this.product.
-          space!=0       
-      }
-    }
-  });
+  // object for computed property
+  computed: {
+    canAdd() {
+      return this.product.space != 0;
+    },
+  },
+});

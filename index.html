@@ -1,22 +1,30 @@
 <html lang="en">
   <head>
+    <!-- Setting the title of the page -->
     <title>Group CW</title>
+    <!-- Linking the external stylesheet -->
     <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- Including Vue CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
+    <!-- Creating div for Vue element -->
     <div id="app">
+      <!-- Creating div for subject details -->
       <div id="details">
         <p>Subject: {{ product.title }}</p>
         <p>Location: {{ product.location }}</p>
         <p>Price(AED): {{ product.price }}</p>
         <p>Space: {{ product.space }}</p>
       </div>
+      <!-- Creating div for image -->
       <div id="image">
         <img id="imgsize" v-bind:src="product.image" />
       </div>
-      <button id="addB" @click='addItem' v-bind:disabled="!canAdd">Add</button>
+      <!-- Creating add button with click and disable attributes -->
+      <button id="addB" @click="addItem" v-bind:disabled="!canAdd">Add</button>
     </div>
+    <!-- Including external script file -->
     <script src="js/script.js"></script>
   </body>
 </html>
