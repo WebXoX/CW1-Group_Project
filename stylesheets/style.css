@@ -1,8 +1,10 @@
+/* styling the body */
 body {
   font-family: sans-serif;
   background-color: navy;
 }
 
+/* styling the item box */
 #app {
   width: 350px;
   height: 250px;
@@ -12,11 +14,13 @@ body {
   background-color: greenyellow;
 }
 
+/* setting hover style for item box */
 #app:hover {
   border: 5px solid white;
   font-weight: bold;
 }
 
+/* styling the item details */
 #details {
   width: 150px;
   height: 160px;
@@ -26,6 +30,7 @@ body {
   position: absolute;
 }
 
+/* positioning and styling the image area */
 #image {
   width: 150px;
   height: 150px;
@@ -34,12 +39,14 @@ body {
   display: inline-block;
 }
 
+/* setting the image size */
 #imgsize {
   width: 150px;
   height: 150px;
   padding-left: 180px;
 }
 
+/* styling the add button */
 #addB {
   background-color: rgb(128, 128, 128);
   border: none;
@@ -64,9 +71,10 @@ body {
   will-change: transform;
 }
 
+/* setting the effects for add button */
 #addB:active {
   position: relative;
-  top:-1px;
+  top: -1px;
   background-color: rgb(120, 128, 128);
 }
 #addB:disabled {
