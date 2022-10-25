@@ -22,7 +22,7 @@
         <img id="imgsize" v-bind:src="product.image" />
       </div>
       <!-- Creating add button with click and disable attributes -->
-      <button id="addB" @click="addItem" v-bind:disabled="!canAdd">Add</button>
+      <button id="addB" v-on:click="addItem" v-bind:disabled="!canAdd">Add</button>
     </div>
     <!-- Including external script file -->
     <script src="js/script.js"></script>
